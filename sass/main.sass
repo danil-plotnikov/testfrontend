@@ -1,0 +1,221 @@
+html
+ font-size: 1px
+ scroll-behavior: smooth
+ 
+body 
+ font-size: 16px
+ position: relative
+ z-index: 1
+ font-family: 'Montserrat', sans-serif
+
+
+.simplebar-track
+ right: -18px
+ .simplebar-vertical
+  width: 8px
+.simplebar-scrollbar
+ &::before
+  background: #FF8469
+  border-radius: 10px
+  opacity: 1 !important
+  width: 4px
+
+ 
+.wrap
+ --p: 50%
+ background: radial-gradient(var(--p) 50%, #252E42 0%, #161C2E)
+ animation: wrap-bg 4s infinite linear
+ width: 100%
+ min-height: 100vh
+ display: flex
+ align-items: center
+ justify-content: center
+ flex-direction: column
+ z-index: 1
+ position: relative
+
+@property --p 
+ syntax: '<percentage>'
+ inherits: false
+ initial-value: 50%
+
+
+@keyframes wrap-bg
+ 0%
+  --p: 50%
+ 50%
+  --p: 35%  
+ 100%
+  --p: 50%
+ 
+
+
+.todo
+ padding: 30px
+ background: #252E42
+ box-shadow: 0px 14px 34px rgba(0, 0, 0, 0.25)
+ border-radius: 20px 0px 40px
+ color: #fff
+ width: 420px
+ height: 540px
+ position: relative
+ margin-bottom: 30px
+ &::after 
+  content: ''
+  display: block
+  position: absolute
+  bottom: 0
+  left: 45%
+  transform: translateX(-50%)
+  width: 360px
+  height: 75px
+  background: linear-gradient(180deg, rgba(37, 46, 66, 0) 0%, #252E42 67.19%)
+ &-bg 
+  position: absolute
+  top: 0
+  left: 0
+  z-index: -2
+  &-1
+   width: 341.86px
+   height: 85.23px
+   background: linear-gradient(180deg, #4F5565 0%, #000000 53.65%)
+   border-radius: 20px
+   animation: bg-1 0.5s 0.3s
+   animation-fill-mode: forwards
+   transform: none
+   top: 0
+  &-2
+   width: 395.1px
+   height: 67.97px
+   background: linear-gradient(180deg, #31394D 0%, #091739 100%)
+   border-radius: 20px
+   animation: bg-2 0.5s 
+   transform: rotate(-2.32deg)
+   top: -18px
+ &-top 
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 20px
+  &__header
+   font-weight: 700
+   font-size: 28px 
+  &__add
+   text-transform: uppercase
+   font-weight: 500
+   font-size: 14px
+   padding: 5px 10px
+   background: #FF8469
+   border-radius: 7px
+   cursor: pointer
+   transition: 0.4s
+   &:hover 
+    background: #D95133
+ &-list 
+  display: flex
+  flex-direction: column
+  padding: 11px 0 50px
+  height: 90%
+ &-item 
+  display: flex
+  align-items: center
+  cursor: pointer
+  margin-bottom: 18px
+  &:hover 
+   .todo-item
+    &__check
+     background: rgba(255, 132, 105, 0.2)
+    &__title
+     color: #FF8469
+  input 
+   display: none
+   &:checked
+    ~.todo-item
+     &__main
+      .todo-item__title
+       text-decoration-line: line-through
+       color: #4F5565
+       &:hover 
+        color: #fff
+     &__check
+      background: #FF8469
+      svg 
+       opacity: 1
+  &__check 
+   margin-right: 15px
+   background: #4F5565
+   border-radius: 6px
+   width: 20px
+   min-width: 20px
+   height: 20px 
+   transition: 0.4s
+   display: flex
+   align-items: center
+   justify-content: center
+   svg 
+    opacity: 0
+  &__title 
+   font-weight: 500
+   line-height: 20px
+   transition: 0.4s
+  &__descr
+   font-size: 12px
+   color: #4F5565
+   white-space: nowrap
+   position: relative
+   margin-top: 3px
+   &-wrap 
+    position: relative
+    max-width: 325px
+    overflow: hidden
+    &::after
+     display: block
+     content: ''
+     position: absolute
+     top: 0
+     right: 0
+     height: 100%
+     width: 12px
+     background: linear-gradient(270deg, #252E42 9.38%, rgba(37, 46, 66, 0) 66.15%)
+
+@keyframes bg-1
+ 0% 
+  top: 0
+  transform: 0
+ 100%
+  transform: rotate(-4.48deg)
+  top: -30px
+
+@keyframes bg-2
+ 0% 
+  top: 0
+  transform: 0
+ 100%
+  transform: rotate(-2.32deg)
+  top: -18px
+
+
+  
+
+
+.author
+ font-weight: 500
+ color: #414B62
+ text-align: center
+
+
+@media screen and (max-width: 600px)
+ .wrap
+  padding-top: 100px
+  padding-bottom: 235px
+
+ .todo 
+  width: 397px
+  height: 540px
+  &::after 
+   width: 320px
+  &-item
+   &__descr
+    &-wrap 
+     max-width: 302px
+ 
