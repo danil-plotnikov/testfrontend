@@ -4,24 +4,24 @@ html {
 }
 
 body {
-  font-size: 16px;
+  font-size: 16rem;
   position: relative;
   z-index: 1;
   font-family: "Montserrat", sans-serif;
 }
 
 .simplebar-track {
-  right: -18px;
+  right: -18rem;
 }
 .simplebar-track .simplebar-vertical {
-  width: 8px;
+  width: 8rem;
 }
 
 .simplebar-scrollbar::before {
   background: #FF8469;
   border-radius: 10px;
   opacity: 1 !important;
-  width: 4px;
+  width: 4rem;
 }
 
 .wrap {
@@ -55,15 +55,15 @@ body {
   }
 }
 .todo {
-  padding: 30px;
+  padding: 30rem;
   background: #252E42;
-  box-shadow: 0px 14px 34px rgba(0, 0, 0, 0.25);
-  border-radius: 20px 0px 40px;
+  box-shadow: 0rem 14rem 34rem rgba(0, 0, 0, 0.25);
+  border-radius: 20rem 0rem 40rem;
   color: #fff;
-  width: 420px;
-  height: 540px;
+  width: 420rem;
+  height: 540rem;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 30rem;
 }
 .todo::after {
   content: "";
@@ -72,8 +72,8 @@ body {
   bottom: 0;
   left: 45%;
   transform: translateX(-50%);
-  width: 360px;
-  height: 75px;
+  width: 360rem;
+  height: 75rem;
   background: linear-gradient(180deg, rgba(37, 46, 66, 0) 0%, #252E42 67.19%);
 }
 .todo-bg {
@@ -83,41 +83,41 @@ body {
   z-index: -2;
 }
 .todo-bg-1 {
-  width: 341.86px;
-  height: 85.23px;
+  width: 341.86rem;
+  height: 85.23rem;
   background: linear-gradient(180deg, #4F5565 0%, #000000 53.65%);
-  border-radius: 20px;
+  border-radius: 20rem;
   animation: bg-1 0.5s 0.3s;
   animation-fill-mode: forwards;
   transform: none;
   top: 0;
 }
 .todo-bg-2 {
-  width: 395.1px;
-  height: 67.97px;
+  width: 395.1rem;
+  height: 67.97rem;
   background: linear-gradient(180deg, #31394D 0%, #091739 100%);
-  border-radius: 20px;
+  border-radius: 20rem;
   animation: bg-2 0.5s;
   transform: rotate(-2.32deg);
-  top: -18px;
+  top: -18rem;
 }
 .todo-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 20rem;
 }
 .todo-top__header {
   font-weight: 700;
-  font-size: 28px;
+  font-size: 28rem;
 }
 .todo-top__add {
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 14px;
-  padding: 5px 10px;
+  font-size: 14rem;
+  padding: 5rem 10rem;
   background: #FF8469;
-  border-radius: 7px;
+  border-radius: 7rem;
   cursor: pointer;
   transition: 0.4s;
 }
@@ -127,14 +127,14 @@ body {
 .todo-list {
   display: flex;
   flex-direction: column;
-  padding: 11px 0 50px;
+  padding: 11rem 0 50rem;
   height: 90%;
 }
 .todo-item {
   display: flex;
   align-items: center;
   cursor: pointer;
-  margin-bottom: 18px;
+  margin-bottom: 18rem;
 }
 .todo-item:hover .todo-item__check {
   background: rgba(255, 132, 105, 0.2);
@@ -159,12 +159,12 @@ body {
   opacity: 1;
 }
 .todo-item__check {
-  margin-right: 15px;
+  margin-right: 15rem;
   background: #4F5565;
-  border-radius: 6px;
-  width: 20px;
-  min-width: 20px;
-  height: 20px;
+  border-radius: 6rem;
+  width: 20rem;
+  min-width: 20rem;
+  height: 20rem;
   transition: 0.4s;
   display: flex;
   align-items: center;
@@ -175,19 +175,19 @@ body {
 }
 .todo-item__title {
   font-weight: 500;
-  line-height: 20px;
+  line-height: 20rem;
   transition: 0.4s;
 }
 .todo-item__descr {
-  font-size: 12px;
+  font-size: 12rem;
   color: #4F5565;
   white-space: nowrap;
   position: relative;
-  margin-top: 3px;
+  margin-top: 3rem;
 }
 .todo-item__descr-wrap {
   position: relative;
-  max-width: 325px;
+  max-width: 325rem;
   overflow: hidden;
 }
 .todo-item__descr-wrap::after {
@@ -197,7 +197,7 @@ body {
   top: 0;
   right: 0;
   height: 100%;
-  width: 12px;
+  width: 12rem;
   background: linear-gradient(270deg, #252E42 9.38%, rgba(37, 46, 66, 0) 66.15%);
 }
 
@@ -208,7 +208,7 @@ body {
   }
   100% {
     transform: rotate(-4.48deg);
-    top: -30px;
+    top: -30rem;
   }
 }
 @keyframes bg-2 {
@@ -218,7 +218,7 @@ body {
   }
   100% {
     transform: rotate(-2.32deg);
-    top: -18px;
+    top: -18rem;
   }
 }
 .author {
@@ -228,18 +228,21 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  html {
+    font-size: 0.2336448vw;
+  }
   .wrap {
-    padding-top: 100px;
-    padding-bottom: 235px;
+    padding-top: 100rem;
+    padding-bottom: 235rem;
   }
   .todo {
-    width: 397px;
-    height: 540px;
+    width: 397rem;
+    height: 540rem;
   }
   .todo::after {
-    width: 320px;
+    width: 320rem;
   }
   .todo-item__descr-wrap {
-    max-width: 302px;
+    max-width: 302rem;
   }
 }/*# sourceMappingURL=main.css.map */
